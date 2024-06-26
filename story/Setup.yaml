@@ -1,0 +1,30 @@
+backgrounds:
+  room: assets/backgrounds/room_day.jpg
+  room_night: assets/backgrounds/room_night.jpg
+  room_night_light: assets/backgrounds/room_night_light.jpg
+  grill: assets/backgrounds/image.png
+
+characters:
+  deuzi:
+    displayName: Deuzilene
+    speechColour: "#ca90cf"
+    looks:
+      normal: assets/characters/Char3NormalSchool.png
+      happy: assets/characters/Char3HappySchool.png
+      angry: assets/characters/Char3AngrySchool.png
+
+music:
+  rollingCredits: assets/audio/Evan_Schaeffer_-_01_-_Aqueduct.mp3
+  morningBGM: assets/audio/Evan_Schaeffer_-_03_-_Glow.mp3
+
+pointAndClick:
+  grill:
+    noga: noga 50 300 nogaScene
+    steak: steak 50 300 steakScene
+
+
+
+extra:
+  spritesheets:
+    noga: assets/objects/noga.png 250 210
+    steak: assets/objects/steak.png 250 187

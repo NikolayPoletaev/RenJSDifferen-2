@@ -1,0 +1,50 @@
+start:
+  - play morningBGM:
+  - show room: WITH PaCTransition CONTINUE
+  - show deuzi: happy AT CENTER WITH FADE
+  - deuzi says: Привет, добро пожаловать в игру "Поиск различий"
+  - deuzi says: Готовы?
+  - choice:
+    - "Да!":
+      - deuzi says happy: Отлично! Продолжайте!
+  - hide deuzi:
+  - call PointAndClick: activate
+
+searchDifferences:
+  - show grill: WITH PaCTransition 
+  - text: "Хочешь ли ты поискать различия?"
+    choice:
+    - "Да!":
+      - text: "Отлично! Теперь найди все различия на фото."
+      - call PointAndClick: activate
+    - "Нет, спасибо.":
+      - text: "Хорошо, может быть в следующий раз!"
+      - call PointAndClick: deactivate
+
+found_missing_leg:
+  - text: "Вы нашли отсутствующую ножку у гриля!"
+  - call PointAndClick: add
+    name: noga
+    key: transparent_button
+    x: 400
+    y: 300
+    scene: nogaScene
+  - call PointAndClick: activate
+
+found_towels:
+  - text: "Вы нашли полотенца на заднем плане!"
+  - call PointAndClick: add
+    name: steak
+    key: transparent_button
+    x: 600
+    y: 200
+    scene: steakScene
+  - call PointAndClick: activate
+
+endGame:
+  - show deuzi: happy AT CENTER WITH FADE
+  - deuzi says: И это был плагин Point and Click!
+  - effect ROLLINGCREDITS:
+    endGame: true
+    text:
+      - IThub
